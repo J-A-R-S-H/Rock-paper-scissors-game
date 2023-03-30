@@ -1,19 +1,10 @@
-function getComputerChoice(choice) {
+const choices = ["rock", "paper", "scissors"]
 
-    if (Math.floor(Math.random(1) * choice)) {
-        return "rock"
-    }
-    else {
-        return "paper"
-    }
-
+function getComputerChoice() {
+    let randomchoice = Math.floor(Math.random() * choices.length)
+    return choices[randomchoice]
 }
-console.log(getComputerChoice(3));
-
-function rpsround() {
-
-}
-
+console.log(getComputerChoice())
 
 
 //Player Selection equals to three choies
