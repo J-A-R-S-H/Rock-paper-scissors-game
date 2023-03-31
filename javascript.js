@@ -7,34 +7,40 @@ function getComputerChoice() {
 console.log(getComputerChoice())
 
 function rpsround(playerSelection, computerSelections) {
-    if (playerSelection === "rock" && computerSelections === "rock") {
+
+    let playerselectionlowercase = playerSelection.toLowerCase()
+
+    if (playerselectionlowercase === "rock" && computerSelections === "rock") {
         return "the round is a draw"
     }
-    else if (playerSelection === "paper" && computerSelections === "paper") {
+    else if (playerselectionlowercase === "paper" && computerSelections === "paper") {
         return "the round is a draw"
     }
-    else if (playerSelection === "scissors" && computerSelections === "scissors") {
+    else if (playerselectionlowercase === "scissors" && computerSelections === "scissors") {
         return "the round is a draw"
     }
-    else if (playerSelection === "rock" && computerSelections === "scissors") {
+    else if (playerselectionlowercase === "rock" && computerSelections === "scissors") {
         return "the player's rock wins against scissors"
     }
-    else if (playerSelection === "paper" && computerSelections === "rock") {
+    else if (playerselectionlowercase === "paper" && computerSelections === "rock") {
         return "the player's paper wins against rock"
     }
-    else if (playerSelection === "scissors" && computerSelections === "paper") {
+    else if (playerselectionlowercase === "scissors" && computerSelections === "paper") {
         return "the player's scissors wins against paper"
     }
-    else if (playerSelection === "scissors" && computerSelections === "rock") {
+    else if (playerselectionlowercase === "scissors" && computerSelections === "rock") {
         return "the compuetr's rock wins against scissors"
     }
-    else if (playerSelection === "rock" && computerSelections === "paper") {
+    else if (playerselectionlowercase === "rock" && computerSelections === "paper") {
         return "the computer's paper wins against rock"
     }
-    else {
+    else if (playerselectionlowercase === "paper" && computerSelections === "scissors") {
         return "the computer's scissors wins against paper"
+    }
+    else {
+        return "that's not an input"
     }
 
 }
 
-console.log(rpsround("rock", "rock"))
+console.log(rpsround("ROck", "paper"))   
