@@ -40,7 +40,17 @@ function rpsround(playerSelection, computerSelections) {
     else {
         return "that's not an input"
     }
-
 }
 
-console.log(rpsround("ROck", "paper"))   
+function game() {
+    rpsround()
+    rpsround()
+    rpsround()
+    rpsround()
+    rpsround()
+}
+
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice()
+console.log(rpsround(playerSelection, computerSelection));
