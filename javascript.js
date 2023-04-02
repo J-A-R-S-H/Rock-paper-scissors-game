@@ -44,12 +44,12 @@ function rpsround(playerSelection, computerSelections) {
     }
 }
 
+
 function game() {
-    rpsround(playerSelection, computerSelections)
-    rpsround(playerSelection, computerSelections)
-    rpsround(playerSelection, computerSelections)
-    rpsround(playerSelection, computerSelections)
-    rpsround(playerSelection, computerSelections)
+    for (i = 0; i < 5; i++) {
+        console.log(rpsround(playerSelection, computerSelection))
+    }
 }
 
-console.log(rpsround(playerSelection, computerSelection));
+game()
+
