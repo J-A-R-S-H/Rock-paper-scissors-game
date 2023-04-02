@@ -1,10 +1,12 @@
 const choices = ["rock", "paper", "scissors"]
+const playerSelection = prompt("What is your choice");
+const computerSelection = getComputerChoice()
 
 function getComputerChoice() {
     let randomchoice = Math.floor(Math.random() * choices.length)
     return choices[randomchoice]
 }
-console.log(getComputerChoice())
+// console.log(getComputerChoice())
 
 function rpsround(playerSelection, computerSelections) {
 
@@ -43,14 +45,11 @@ function rpsround(playerSelection, computerSelections) {
 }
 
 function game() {
-    rpsround()
-    rpsround()
-    rpsround()
-    rpsround()
-    rpsround()
+    rpsround(playerSelection, computerSelections)
+    rpsround(playerSelection, computerSelections)
+    rpsround(playerSelection, computerSelections)
+    rpsround(playerSelection, computerSelections)
+    rpsround(playerSelection, computerSelections)
 }
 
-
-const playerSelection = "rock";
-const computerSelection = getComputerChoice()
 console.log(rpsround(playerSelection, computerSelection));
